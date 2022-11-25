@@ -1,6 +1,8 @@
 
 def fibonacci(num)
-    # type your code here
+series = (1..num).inject([0,1]) {|fib| fib << fib.last(2).inject(:+)}
+
+series[num]
 end
 
 if __FILE__ == $PROGRAM_NAME
